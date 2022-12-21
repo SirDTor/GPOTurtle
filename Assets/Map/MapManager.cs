@@ -26,16 +26,13 @@ public class MapManager : MonoBehaviour
         {
             if (obj.InspectStep(direction))
             {
-                Debug.Log(this.name + "тут");
                 obj.currentDirection = direction;
                 obj.SetVector();
                 obj.MoveObject(1);
                 return true;
             }
-            Debug.Log(this.name + "аааа");
             return false;
         }
-        Debug.Log(this.name + "тесто");
         return !map.HasTile(Vector3Int.FloorToInt(point));
     }
 

@@ -34,7 +34,6 @@ public class MovingObject : ObjectOnMap
     //проверить возможность шага  в данном направлении (только ограничения карты)
     public bool InspectStep(Direction direction)
     {
-        Debug.Log(this.name + "хуета");
         Vector3 dirDelta = SetVector(direction);
         return mapManager.Inspect(transform.position + dirDelta, direction);
     }
